@@ -1,5 +1,7 @@
 cmake_minimum_required(VERSION 3.8)
 
+find_package(OpenBLAS REQUIRED)
+
 # Look for sugar.cmake files in the plugin src directory
 sugar_include("src")
 
@@ -21,3 +23,4 @@ MESSAGE(STATUS "CMAKE_CUDA_FLAGS: ${CMAKE_CUDA_FLAGS}")
 target_compile_features(misc_scope PUBLIC cxx_std_11)
 set_property(TARGET misc_scope PROPERTY CUDA_STANDARD 11)
 target_link_libraries(misc_scope PRIVATE benchmark::benchmark)
+target_link_libraries(misc_scope PUBLIC ${OpenBLAS_LIB})
