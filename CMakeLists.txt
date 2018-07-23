@@ -6,7 +6,7 @@ find_package(OpenBLAS REQUIRED)
 sugar_include("src")
 
 # The plugin is a static library that Scope will be linked with
-add_library(misc_scope ${misc_SOURCES} ${misc_CUDA_SOURCES})
+add_library(misc_scope OBJECT ${misc_SOURCES} ${misc_CUDA_SOURCES})
 target_include_directories(misc_scope PRIVATE 
     ${SRC_DIR}
     ${THIRDPARTY_DIR}
