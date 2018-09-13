@@ -1,3 +1,8 @@
+OPTION(ENABLE_MISC "Enable misc|scope (github.com/rai-project/misc_scope)" OFF)
+if (NOT ENABLE_MISC)
+ return()
+endif()
+
 cmake_minimum_required(VERSION 3.12 FATAL_ERROR)
 
 find_package(OpenBLAS REQUIRED)
