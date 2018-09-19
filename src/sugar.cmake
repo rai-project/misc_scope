@@ -16,5 +16,6 @@ sugar_include(conv)
 sugar_include(gemm)
 sugar_include(launch)
 sugar_include(lock)
+sugar_include(numa)
 sugar_include(vectoradd)
 
